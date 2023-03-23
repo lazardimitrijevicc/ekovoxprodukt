@@ -1,0 +1,423 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #e3e9f7;
+}
+
+img{
+    width: 100%;
+}
+
+header{
+    width: 100vw;
+    height: 70px;
+    background-color: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin: 0 auto;
+    background-color: #32323239;
+    -webkit-box-shadow: -33px 64px 100px 200px rgba(0,0,0,0.52);
+    -moz-box-shadow: -33px 64px 100px 200px rgba(0,0,0,0.52);
+    box-shadow: -33px 64px 100px 200px rgba(0,0,0,0.52);
+}
+
+nav{
+    margin-top: auto;
+}
+
+.logo{
+    width: 150px;
+}
+
+nav .logo{
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: #f6f4ff;
+    display: block;
+    margin: 0 5px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: .3s;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background-color: #f6f4ff;
+    transition: .2s;
+    color: #212526;
+}
+
+nav ul li a.active{
+    background-color: #044f0e;
+    color: #fff;
+}
+
+.hamburger{
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.hamburger:hover{
+    background-color: #f6f4ff40;
+    border-radius: 10px;
+
+}
+
+.hamburger div{
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 1100px) {
+    header{
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #fefefe;
+        transition: .2s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    #nav-check:checked ~ nav{
+        left: 0;
+
+    }
+
+    nav .logo{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        transform: scale(.7);
+        position: relative;
+        margin: auto;
+        position: relative;
+        right: -40px !important;
+    }
+
+    nav .logo img{
+        position: relative;
+        margin: auto;
+        right: -40px !important;
+    }
+
+    nav ul li a{
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #000;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+    .logo{
+        transform: scale(.7);
+        position: relative;
+        left: -27px;
+    }
+}
+
+.background{
+    padding-bottom: 130px;
+    background-image: url(./background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.form{
+    text-align: center;
+    color: #fff;
+}
+
+.form h1{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 100px;
+    font-size: 60px;
+}
+
+.form p{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.hero-section{
+    overflow: hidden;
+}
+
+.service-item-1{
+    height: 400px;
+    margin: 40px auto;
+    background-image: url(./service-1.jpg);
+    background-size: cover;
+    transition: .5s;
+    overflow: hidden;
+    animation-name: service-item-1;
+    animation-duration: 5s;
+    position: relative;
+    border-top:8px solid #212526;
+    border-bottom:8px solid #212526;
+}
+
+.service-item-1 p{
+    font-size: 20px;
+}
+
+@keyframes service-item-1{
+    0%{left: -1800px;}
+    100%{left: 0;}
+}
+
+.service-item-1:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    -webkit-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+}
+
+.service-item-1:hover .overlay-1{
+    opacity: 1;
+}
+
+.service-item-1:hover .form-section-1{
+    opacity: 1 !important;
+}
+
+.overlay-1 {
+    background-color: rgba(0,0,0,0.52);
+    height: 100%;
+    text-align: center;
+    transition: .5s;
+    opacity: 0;
+}
+
+.form-section-1{
+    position: relative;
+    bottom: -90px;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+}
+
+/* test */
+
+.service-item-2{
+    height: 400px;
+    margin: 40px auto;
+    background-image: url(./service-3.jpg);
+    background-size: cover;
+    border-top:8px solid #212526;
+    border-bottom:8px solid #212526;
+    transition: .3s;
+    overflow: hidden;
+    animation-name: service-item-2;
+    animation-duration: 5s;
+    position: relative;
+}
+
+.service-item-2 p{
+    font-size: 20px;
+}
+
+@keyframes service-item-2{
+    0%{left: 1800px;}
+    100%{left: 0;}
+}
+
+.service-item-2:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    -webkit-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+}
+
+.service-item-2:hover .overlay-2{
+    opacity: 1;
+}
+
+.service-item-2:hover .form-section-2{
+    opacity: 1;
+}
+
+.overlay-2 {
+    background-color: rgba(0,0,0,0.52);
+    height: 100%;
+    text-align: center;
+    transition: .5s;
+    opacity: 0;
+}
+
+.form-section-2{
+    position: relative;
+    bottom: -90px;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+}
+
+/* service item 3 */
+
+.service-item-3{
+    height: 400px;
+    margin: 40px auto;
+    background-image: url(./service-2.jpg);
+    background-size: cover;
+    background-position-y: -150px;
+    border-top:8px solid #212526;
+    border-bottom:8px solid #212526;
+    transition: .3s;
+    overflow: hidden;
+    animation-name: service-item-3;
+    animation-duration: 5s;
+    position: relative;
+}
+
+.service-item-3 p{
+    font-size: 20px;
+}
+
+@keyframes service-item-3{
+    0%{left: -1800px;}
+    100%{left: 0;}
+}
+
+.service-item-3:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    -webkit-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+}
+
+.service-item-3:hover .overlay-3{
+    opacity: 1;
+}
+
+.service-item-3:hover .form-section-3{
+    opacity: 1;
+}
+
+.overlay-3 {
+    background-color: rgba(0,0,0,0.52);
+    height: 100%;
+    text-align: center;
+    transition: .5s;
+    opacity: 0;
+}
+
+.form-section-3{
+    position: relative;
+    bottom: -90px;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+}
+
+@media only screen and (max-width: 500px){
+    .service-item-3{
+        background-position-y: 0;
+    }
+}
+
+/* service-4 */
+
+.service-item-4{
+    height: 400px;
+    margin: 40px auto;
+    background-image: url(./service-4.jpg);
+    background-size: cover;
+    border-top:8px solid #212526;
+    border-bottom:8px solid #212526;
+    transition: .3s;
+    overflow: hidden;
+    animation-name: service-item-4;
+    animation-duration: 5s;
+    position: relative;
+}
+
+.service-item-4 p{
+    font-size: 20px;
+}
+
+@keyframes service-item-4{
+    0%{left: 1800px;}
+    100%{left: 0;}
+}
+
+.service-item-4:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    -webkit-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.75);
+}
+
+.service-item-4:hover .overlay-4{
+    opacity: 1;
+}
+
+.service-item-4:hover .form-section-4{
+    opacity: 1;
+}
+
+.overlay-4 {
+    background-color: rgba(0,0,0,0.52);
+    height: 100%;
+    text-align: center;
+    transition: .5s;
+    opacity: 0;
+}
+
+.form-section-4{
+    position: relative;
+    bottom: -90px;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+}

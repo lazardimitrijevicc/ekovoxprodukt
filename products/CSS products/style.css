@@ -1,0 +1,414 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #e3e9f7;
+}
+
+.background{
+    padding-bottom: 130px;
+    background-image: url(./background-products.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+img{
+    width: 100%;
+}
+
+header{
+    width: 100vw;
+    height: 70px;
+    background-color: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    /* border-radius: 0 0 10px 10px; */
+    margin: 0 auto;
+    background-color: #32323239;
+    -webkit-box-shadow: -33px 64px 100px 200px rgba(0,0,0,0.52);
+    -moz-box-shadow: -33px 64px 100px 200px rgba(0,0,0,0.52);
+    box-shadow: -33px 64px 100px 200px rgba(0,0,0,0.52);
+}
+
+nav{
+    margin-top: auto;
+}
+
+.logo{
+    width: 150px;
+    /* margin-top: 8px; */
+}
+
+nav .logo{
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: #f6f4ff;
+    display: block;
+    margin: 0 5px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: .3s;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background-color: #f6f4ff;
+    transition: .2s;
+    color: #212526;
+}
+
+nav ul li a.active{
+    background-color: #044f0e;
+    color: #fff;
+}
+
+.hamburger{
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.hamburger:hover{
+    background-color: #f6f4ff40;
+    border-radius: 10px;
+
+}
+
+.hamburger div{
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: #fff;
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+    header{
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #fefefe;
+        transition: .2s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    #nav-check:checked ~ nav{
+        left: 0;
+
+    }
+
+    nav .logo{
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        transform: scale(.7);
+        position: relative;
+        margin: auto;
+        position: relative;
+        right: -40px !important;
+    }
+
+    .nav .logo img{
+        position: relative;
+        margin: auto;
+        right: -40px !important;
+    }
+
+    nav ul li a{
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #000000;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    nav ul li a{
+        color: #000000 !important;
+    }
+
+    nav .logo{
+        left: 0px;
+    }
+
+    .logo{
+        transform: scale(.7);
+        position: relative;
+        left: -27px;
+    }
+
+    .hero-item:hover{
+        transform: translateY(450px) !important;
+    }
+
+    .hero-item-2:hover{
+        transform: translateY(-450px) !important;
+    }
+
+    .hero-item-3:hover{
+        transform: translateY(450px) !important;
+    }
+
+}
+
+
+.form h1{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 100px;
+    font-size: 60px;
+}
+
+.form p{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.hero-section{
+    padding-bottom: 00px;
+    overflow: hidden;
+}
+
+.nothing{
+    height: 500px;
+}
+
+.hero-item{
+    background-image: url(./hero-item-1.jpg);
+    background-size: cover;
+    height: 400px;
+    margin: 50px auto;
+    animation-name: hero-1;
+    position: relative;
+    animation-duration: 5s;
+    border-top: 8px solid rgb(77, 77, 77);
+    border-bottom: 8px solid #044f0e;
+    transition:transform 5s;
+    overflow: hidden;
+    border-left: none;
+    border-right: none;
+    z-index: 1;
+}
+
+.hero-item:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.75);
+    transform: translateX(650px);
+}
+.form-1{
+    margin: 0 auto;
+    position: relative;
+    opacity: 1;
+    top: -380px;
+    overflow: hidden;
+    z-index: -1;
+    animation-name: form-1;
+    animation-duration: 8s;
+}
+
+@keyframes form-1 {
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+ @keyframes hero-1 {
+    0%{right: -1800px;}
+    100%{right: 0;}
+}
+
+.hero-item-2{
+    background-image: url(./hero-item-2.jpg);
+    background-size: cover;
+    height: 400px;
+    margin: 50px auto;
+    animation-name: hero-2;
+    position: relative;
+    animation-duration: 5s;
+    border-top: 8px solid rgb(77, 77, 77);
+    border-bottom: 8px solid #044f0e;
+    transition:transform 5s;
+    overflow: hidden;
+    border-left: none;
+    border-right: none;
+    z-index: 1;
+}
+
+.hero-item-2:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.75);
+    transform: translateX(-660px);
+}
+.form-2{
+    margin: 0 auto;
+    position: relative;
+    opacity: 1;
+    top: -380px;
+    overflow: hidden;
+    z-index: -1;
+    animation-name: form-2;
+    animation-duration: 8s;
+}
+
+@keyframes hero-2 {
+    0%{left: -1800px;}
+    100%{left: 0;}
+}
+
+@keyframes form-2 {
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.hero-item .three{
+    background-image: url(./hero-item-3.jpg) !important;
+}
+
+.hero-item-3{
+    background-image: url(./hero-item-3.jpg);
+    background-size: cover;
+    height: 400px;
+    margin: 50px auto;
+    animation-name: hero-3;
+    position: relative;
+    animation-duration: 5s;
+    border-top: 8px solid rgb(77, 77, 77);
+    border-bottom: 8px solid #044f0e;
+    transition:transform 5s;
+    overflow: hidden;
+    border-left: none;
+    border-right: none;
+    z-index: 1;
+}
+
+.hero-item-3:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.75);
+    transform: translateX(660px);
+}
+
+.form-3{
+    margin: 0 auto;
+    position: relative;
+    opacity: 1;
+    top: -380px;
+    overflow: hidden;
+    z-index: -1;
+    animation-name: form-3;
+    animation-duration: 8s;
+    transition: .3s;
+}
+
+@keyframes hero-3 {
+    0%{right: -1800px;}
+    100%{right: 0;}
+}
+
+@keyframes form-3 {
+    0%{opacity: 0;}
+    10%{opacity: 0;}
+    20%{opacity: 0;}
+    30%{opacity: 0;}
+    40%{opacity: 0;}
+    50%{opacity: 0;}
+    60%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.form-hero-1 h1{
+    margin: 200px auto;
+    animation-name: form-hero-1;
+    animation-duration: 5.5s;
+    position: relative;
+}
+
+@keyframes form-hero-1{
+    0%{right: 1800px;}
+    100%{right: 0;}
+}
+
+.form-hero-2 h1{
+    margin: 200px auto;
+    animation-name: form-hero-2;
+    animation-duration: 5.5s;
+    position: relative;
+}
+
+@keyframes form-hero-2{
+    0%{right: -1800px;}
+    100%{right: 0;}
+}
+
+.form-hero-3 h1{
+    margin: 200px auto;
+    animation-name: form-hero-3;
+    animation-duration: 5.5s;
+    position: relative;
+}
+
+@keyframes form-hero-3{
+    0%{right: 1800px;}
+    100%{right: 0;}
+}
